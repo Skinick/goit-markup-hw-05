@@ -354,7 +354,8 @@ a {
   width: 100%;
   height: 70px;
   text-align: center;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
+  transform: translateY(-70px);
 }
 
 /* Команда */
@@ -431,6 +432,7 @@ a {
 
 .social-list-icon {
   fill: var(--icons-color);
+  transition: fill var(--transition);
 }
 
 /* Постоянные клиенты */
@@ -593,19 +595,20 @@ a {
   text-align: center;
 
   color: var(--primary-text-color);
-  background: var(--background-color);
+  background-color: var(--background-color);
   border-radius: 4px;
 
   cursor: pointer;
   display: flex;
   justify-content: center;
   padding: 6px 22px;
-  transition: color var(--transition);
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -630,6 +633,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.project-card-link {
+  transition: box-shadow var(--transition);
 }
 
 .project-card-link:hover,
